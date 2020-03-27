@@ -1,3 +1,11 @@
+var defaultUsers = {};
+defaultUsers["userName"] = 'DefaultUserName1';
+defaultUsers["userCode"] = 'DefaultUserCode1';
+insertNewUser(defaultUsers);
+defaultUsers["userName"] = 'DefaultUserName2';
+defaultUsers["userCode"] = 'DefaultUserCode2';
+insertNewUser(defaultUsers);
+
 var selectedRow = null;
 
 function onFormSubmit() {
