@@ -8,22 +8,41 @@
   		<title>Test CRUD</title>
 	</head>
 	<body>
-		<header>
-			<h1>Lista de usuarios</h1>
-		</header>
-
-		<section>
-
-			<input id="txtNewUser" type="text" placeholder="Agrega un usuario nuevo">
-			<button onclick="btnAgregar()">Agregar</button>
-
-			<table id="table">
-				<tr>
-					<th>Usuarios actuales:</th>
-				</tr>
-			</table>
-
-		</section>
+		<table id="table">
+			<tr>
+				<td>
+					<form onsubmit="event.preventDefault();onFormSubmit()" autocomplete="off">
+						<div style="margin-bottom: 1em" style="margin-right: 1em">
+							<label>Nombre</label>
+							<br>
+							<input type="text" name="userName" id="userName">
+						</div>
+						<div style="margin-bottom: 1em; margin-right: 1em">
+							<label>Código</label>
+							<br>
+							<input type="text" name="userCode" id="userCode">
+						</div>
+						<div class="form-action-buttons">
+							<input type="submit" value="Subir" id="buttonSubir">
+						</div>
+					</form>
+				</td>
+				<td>
+					<h3>Lista de Usuarios:</h3>
+					<table class="list" id="listOfUsers">
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Codigo</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+				</td>
+			</tr>
+		</table>
 		<script src="app.js"></script>
 	</body>
 </html>
